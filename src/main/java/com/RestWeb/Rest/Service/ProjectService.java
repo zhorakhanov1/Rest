@@ -12,6 +12,8 @@ import java.util.List;
 
 @Slf4j
 @Service
+
+//Is a layer in an application that facilitates communication between the project controller and the project repository
 public class ProjectService {
 
     public ProjectRepository projectRepository;
@@ -36,12 +38,8 @@ public class ProjectService {
         projectRepository.save(project);
     }
 
-    public void updateById(Project project){
-//        Project old = projectRepository.getById(project.getId());
-//        old.setName(project.getName());
-//        old.setStartDate(project.getStartDate());
-//        old.setEndDate(project.getEndDate());
-        log.info("IN TaskService updateById {}",project);
+    public void update(Project project){
+        log.info("IN TaskService update {}",project);
         projectRepository.save(project);
     }
 

@@ -10,6 +10,7 @@ package com.RestWeb.Rest.Controller;
 
 @RestController
 @RequestMapping("/api/tasks")
+//To create RESTful Web Service we need RestController class
 public class TaskController {
 
 
@@ -34,8 +35,8 @@ public class TaskController {
         taskService.deleteById(id);
     }
     @PutMapping("")
-    public void updateById(@RequestBody @Validated Task task){
-        taskService.updateById(task);
+    public void update(@RequestBody @Validated Task task){
+        taskService.update(task);
     }
     @GetMapping("")
     public List<Task> getAll(){

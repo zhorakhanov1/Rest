@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/projects")
+//To create RESTful Web Service we need RestController class
 public class ProjectController {
 
     public ProjectService projectService;
@@ -35,8 +36,8 @@ public class ProjectController {
     }
 
     @PutMapping("")
-    public void updateById(@RequestBody @Validated Project project){
-        projectService.updateById(project);
+    public void update(@RequestBody @Validated Project project){
+        projectService.update(project);
     }
 
     @GetMapping("")

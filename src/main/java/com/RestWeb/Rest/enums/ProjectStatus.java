@@ -1,5 +1,6 @@
 package com.RestWeb.Rest.enums;
 
+//This class indicates a project's status
 public enum ProjectStatus {
     NOT_STARTED("NOT_STARTED"),
     ACTIVE("ACTIVE"),

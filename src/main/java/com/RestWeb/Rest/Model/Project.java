@@ -16,6 +16,7 @@ import java.util.List;
 @EqualsAndHashCode
 @Entity
 
+//This is entity class for Project
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

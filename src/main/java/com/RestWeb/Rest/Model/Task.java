@@ -13,6 +13,7 @@ import javax.persistence.*;
 @EqualsAndHashCode
 @Entity
 
+//This is entity class for Task
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

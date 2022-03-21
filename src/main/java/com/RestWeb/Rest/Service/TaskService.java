@@ -12,9 +12,9 @@ import java.util.List;
 
 @Slf4j
 @Service
-/// ТаскСервис для работы с базами данных
-public class TaskService {
 
+//Is a layer in an application that facilitates communication between the task controller and the task repository
+public class TaskService{
 
     public TaskRepository taskRepository;
     @Autowired
@@ -37,13 +37,11 @@ public class TaskService {
         taskRepository.save(task);
     }
 
-    public void updateById(Task task){
-        Task old = taskRepository.getById(task.getId());
-        old.setName(task.getName());
-        old.setDescription(task.getDescription());
-        log.info("IN TaskService updateById {}",task);
-        taskRepository.save(old);
+    public void update(Task task){
+        log.info("IN TaskService update {}",task);
+        taskRepository.save(task);
     }
+
     public void done(Long id){
         Task old = taskRepository.getById(id);
         log.info("Task Status : {}" ,old.getStatus());
