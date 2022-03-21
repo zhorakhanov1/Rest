@@ -15,8 +15,8 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("com.RestWeb.Rest.Controller"))
+                .paths(PathSelectors.ant("/api/*"))
                 .build();
     }
 }
